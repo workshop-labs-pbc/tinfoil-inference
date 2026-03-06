@@ -34,10 +34,26 @@ shim:
   tls-challenge: dns
   paths:
     - /ping
-    - /v1/chat/completions
+    - /dev/ping                                                                                                                       
+    - /prod/ping
+    - /v1/chat/completions                                                                                                            
+    - /dev/v1/chat/completions
+    - /prod/v1/chat/completions
     - /v1/loaded_model
+    - /dev/v1/loaded_model
+    - /prod/v1/loaded_model
     - /v1/metrics/vllm/full
+    - /dev/v1/metrics/vllm/full
+    - /prod/v1/metrics/vllm/full
     - /v1/metrics/short
+    - /dev/v1/metrics/short
+    - /prod/v1/metrics/short
     - /v1/downloaded_models
+    - /dev/v1/downloaded_models
+    - /prod/v1/downloaded_models
     - /v1/downloaded_models_reset
+    - /dev/v1/downloaded_models_reset
+    - /prod/v1/downloaded_models_reset
     - /v1/user/*
+    - /dev/v1/user/*
+    - /prod/v1/user/*
