@@ -19,6 +19,8 @@ containers:
       - GOOGLE_APPLICATION_CREDENTIALS: /key.json
       - POLLUX_LN_GCS_BUCKET: gs://pollux-enc-prod
       - KEY_MODE: real_keys
+    volumes:
+      - /mnt/ramdisk/gcloud_key.json:/key.json:ro
     secrets:
       - HF_TOKEN
       - INTERNAL_SERVICE_SECRET
