@@ -21,6 +21,7 @@ containers:
       - KEY_MODE: real_keys
     volumes:
       - /mnt/ramdisk/gcloud_key.json:/key.json:ro
+      - /mnt/ramdisk/data:/data
     secrets:
       - HF_TOKEN
       - INTERNAL_SERVICE_SECRET
