@@ -19,6 +19,8 @@ containers:
       - GOOGLE_APPLICATION_CREDENTIALS: /key.json
       - POLLUX_LN_GCS_BUCKET: gs://pollux-enc-prod
       - KEY_MODE: real_keys
+      - POLLUX_ENV: prod
+      - POLLUX_MAX_LOADED_ADAPTERS: 100
     volumes:
       - /mnt/ramdisk/gcloud_key.json:/key.json:ro
       - /mnt/ramdisk/data:/data
