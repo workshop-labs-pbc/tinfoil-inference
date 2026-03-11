@@ -5,7 +5,7 @@ memory: 1966080
 
 containers:
   - name: ml-inference
-    image: "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference-multigpu@sha256:acf7cd820b80c622d487ff0d7ad100884ba8f6828f1d4aead657de9b22f34063"
+    image: "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference-multigpu@sha256:d908bb003c75cd28e5f3b82b23aab1775fc10ef5595839cc81812cadff1315f6"
     entrypoint:
       - python
     command:
