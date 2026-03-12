@@ -1,6 +1,6 @@
-shim-version: v0.4.2@sha256:d65f769e37bbe86ffaeef42120c29c4b9de33415fcd7588a9ef7a64f609aa2a3
-cvm-version: 0.6.10
+cvm-version: 0.7.1
 cpus: 128
+gpus: 8
 memory: 1966080
 
 containers:
@@ -25,20 +25,16 @@ containers:
       - /mnt/ramdisk/gcloud_key.json:/key.json:ro
       - /mnt/ramdisk/data:/data
     secrets:
-      - gcloud-key
       - HF_TOKEN
       - INTERNAL_SERVICE_SECRET
 
 shim:
-  listen-port: 443
   upstream-port: 8000
-  publish-attestation: true
-  tls-challenge: dns
   paths:
     - /ping
-    - /dev/ping                                                                                                                       
+    - /dev/ping
     - /prod/ping
-    - /v1/chat/completions                                                                                                            
+    - /v1/chat/completions
     - /dev/v1/chat/completions
     - /prod/v1/chat/completions
     - /v1/loaded_model
